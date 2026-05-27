@@ -16,3 +16,11 @@ The interactive compiler methodology is inspired by:
 
 - [mattpocock/skills](https://github.com/mattpocock/skills) – specifically the "grill-me" skill
 - [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) – engineering skills framework
+
+## How to Use
+
+**efficient-protocol** – Best used with `AGENTS.md` for agent prompt customization and behavioral tuning.
+
+**audit-me & review-me** – Compiler skills optimized for iterative empirical refinement:
+- **Scope:** Prompt with a scope or file path. Default: current branch diff.
+- **Rounds:** Specify the number of iterations. Default: 5 rounds of questioning and refinement.
