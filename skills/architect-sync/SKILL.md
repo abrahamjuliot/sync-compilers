@@ -1,5 +1,5 @@
 ---
-name: architect-me
+name: architect-sync
 description: An adversarial system design agent that interrogates structural boundaries. It forces explicit decisions on technical trade-offs (e.g., consistency vs. availability) and outputs a formal Architecture Decision Record (ADR).
 ---
 

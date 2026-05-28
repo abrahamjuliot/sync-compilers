@@ -1,5 +1,5 @@
 ---
-name: api-me
+name: api-sync
 description: A contract-driven design agent that forces strict communication boundaries before code is written. It interrogates payloads, idempotency, pagination, and error handling, outputting a complete, valid OpenAPI YAML specification.
 ---
 

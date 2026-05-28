@@ -1,5 +1,5 @@
 ---
-name: migrate-me
+name: migrate-sync
 description: An adversarial database migration agent that evaluates schema changes against operational realities. It interrogates table locks, backfill strategies, and rollback contingencies before outputting bulletproof `up` and `down` SQL scripts.
 ---
 

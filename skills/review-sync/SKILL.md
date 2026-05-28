@@ -1,5 +1,5 @@
 ---
-name: review-me
+name: review-sync
 description: A token-optimized agent that conducts thorough, multi-axis code reviews through an interactive queue. Extracts actionable findings and forces empirical clarity before compiling an agreed-upon review handoff into a structured markdown artifact.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: hack-me
+name: hack-sync
 description: An adversarial threat-modeling agent that acts as a red-team attacker. It presents specific exploit vectors (e.g., IDOR, SSRF, race conditions) and interrogates the system's defenses before outputting a formal Threat Model matrix and a unified mitigation plan.
 ---
 

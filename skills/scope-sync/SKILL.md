@@ -1,5 +1,5 @@
 ---
-name: scope-me
+name: scope-sync
 description: An adversarial scoping agent that ruthlessly challenges feature requests. It forces empirical clarity on what constitutes an MVP blocker versus a "nice-to-have," outputting a vertically sliced task list ready for import into Jira/Linear.
 ---
 

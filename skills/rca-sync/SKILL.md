@@ -1,5 +1,5 @@
 ---
-name: rca-me
+name: rca-sync
 description: An adversarial Root Cause Analysis agent that walks the user through a strict "5 Whys" framework after a system failure. It refuses to accept "human error" as a root cause, interrogating testing gaps and missing alerts before outputting a structured, Blameless Post-Mortem.
 ---
 

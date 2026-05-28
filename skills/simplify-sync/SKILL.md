@@ -1,5 +1,5 @@
 ---
-name: simplify-me
+name: simplify-sync
 description: A de-abstraction agent that targets overly "clever" code, deep inheritance trees, and premature abstractions. It forces decisions between complex logic and flatter, procedural alternatives, outputting a clean, refactored code diff.
 ---
 

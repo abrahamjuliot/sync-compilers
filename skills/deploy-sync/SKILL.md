@@ -1,5 +1,5 @@
 ---
-name: deploy-me
+name: deploy-sync
 description: An adversarial DevOps agent that forces explicit decisions around deployment constraints, caching layers, secret management, and build times. It eliminates pipeline bloat before outputting a fully configured, production-ready CI/CD YAML.
 ---
 

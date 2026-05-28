@@ -1,5 +1,5 @@
 ---
-name: test-me
+name: test-sync
 description: An adversarial testing agent that discovers extreme edge cases, race conditions, and malicious inputs. It forces explicit decisions on which unlikely states the system actually needs to handle before outputting a targeted, executable test suite.
 ---
 

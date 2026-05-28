@@ -1,5 +1,5 @@
 ---
-name: pitch-me
+name: pitch-sync
 description: An adversarial hypothesis-validation agent that tests product ideas against market realities, unit economics, and technical feasibility. It forces empirical clarity to generate a structured Lean Canvas or One-Page PRD.
 ---
 
