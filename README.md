@@ -10,7 +10,7 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 ## Product & Scope
 
-**[pitch-sync](skills/pitch-sync/)** – Plays devil's advocate on product ideas. Tests feasibility, market fit, and competitive moat. *(Terminal: Lean Canvas or one-page PRD)*
+**[pitch-sync](skills/pitch-sync/)** – Gamified investor interrogation gauntlet. Stress-tests product ideas against market realities, unit economics, and competitive moats through a turn-based "Term Sheet" negotiation. *(Terminal: Professional Lean Canvas)*
 
 ---
 
