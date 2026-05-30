@@ -38,7 +38,7 @@ Action Required: [Accept] | [Dismiss] | [Refine: "<user instructions>"]
 
 **Example Output:**
 
-```text
+````text
 [■□□□] 20% ↔ | Active Node: Data Access | Risk Level: Critical
 Graph Path: Readability → N+1 Query → Data Mappers
 Issue: N+1 query detected in user serialization ∵ iterating over mapped relationships triggers individual DB calls.
@@ -50,7 +50,7 @@ Fix/Proposal:
 ```
 Question: Is this naive `.map()` pattern used in other controllers like `posts` or `comments`, or is it isolated here?
 Action Required: [Accept] | [Dismiss] | [Refine: "<user instructions>"]
-```
+````
 
 ### 2. The Graph Mutation (User Action)
 

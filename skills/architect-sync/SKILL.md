@@ -62,7 +62,7 @@ graph TD
 ```
 
 ## 1. Context
-[Brief description of the system and constraints: e.g., We need to process high-throughput webhook events with zero ops budget.]
+[System description & constraints: e.g., High-throughput webhooks, zero ops budget.]
 
 ## 2. Decided Branch
 **Branch B: Containerized Monolith**

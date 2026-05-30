@@ -64,4 +64,3 @@ graph TD
   * *Setup:* Send `processRefund` with `amount: -50`.
   * *Assertion:* Fails with `400 Bad Request` (Invalid refund amount) before hitting the DB lock.
 ````
-```
