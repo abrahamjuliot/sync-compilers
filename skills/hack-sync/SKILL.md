@@ -42,12 +42,12 @@ Replace the Telemetry Header with this exact terminal transition:
 [■■■■] 100% ↔ | Attack Graph Exhausted → [⚡️] Ready for Export
 
 *Line 2+: The Artifact Block*
-Output the final Threat Model inside a single raw markdown code block (` ```md `). Briefly instruct the user to copy the artifact below for their use. Do not attempt to write to a file, and do not include any conversational filler outside of this block. The artifact MUST include a `mermaid` visual of the resolved attack graph, followed by the mitigation matrix.
+Output the final Threat Model inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. Do not attempt to write to a file, and do not include any conversational filler outside of this block. The artifact MUST include a `mermaid` visual of the resolved attack graph, followed by the mitigation matrix.
 
 *Example Handoff Artifact Block:*
 Please copy the Threat Model below:
 
-```md
+````md
 # Threat Model: [ System Name ]
 
 ## Resolved Attack Graph
@@ -66,4 +66,4 @@ graph TD
 * **[High] Vector:** WAF Bypass via Request Smuggling
   * **Exploit:** Attacker downgrades connection to HTTP/1.1 to bypass WAF rules.
   * **Mitigation:** Enforce HTTP/2 end-to-end on API Gateway.
-```
+````

@@ -39,12 +39,12 @@ Replace the Telemetry Header with this exact terminal transition:
 [■■■■] 100% ↔ | Failure Graph Traversed → [⚡️] Ready for Export
 
 *Line 2+: The Artifact Block*
-Output the final testing plan inside a single raw markdown code block (` ```md `). Briefly instruct the user to copy the artifact below for their use. The artifact MUST include a `mermaid` visual of the traversed failure graph, followed by a concise checklist of the required edge case tests and their expected assertions. **Do not output a massive executable test suite.** Optimize for tokens by using dense bullet points.
+Output the final testing plan inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include a `mermaid` visual of the traversed failure graph, followed by a concise checklist of the required edge case tests and their expected assertions. **Do not output a massive executable test suite.** Optimize for tokens by using dense bullet points.
 
 *Example Handoff Artifact Block:*
 Please copy your adversarial test plan below:
 
-```md
+````md
 # Adversarial Test Plan: [ Function Name ]
 
 ## Traversed Failure Graph
@@ -63,5 +63,5 @@ graph TD
 * **[Boundary] Negative Integer Payload**
   * *Setup:* Send `processRefund` with `amount: -50`.
   * *Assertion:* Fails with `400 Bad Request` (Invalid refund amount) before hitting the DB lock.
-```
+````
 ```

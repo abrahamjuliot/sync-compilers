@@ -75,12 +75,12 @@ Replace the Telemetry Header with this exact terminal transition:
 `[■■■■] 100% ↔ | Graph Resolved → [⚡️] Ready for Copy`
 
 **Line 2+: The Artifact Block**
-Output the plan inside a single raw markdown code block (` ```md `). Briefly instruct the user to copy the artifact below for their use. The artifact MUST include a `mermaid` visual of the resolved question graph, followed by the plan details.
+Output the plan inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include a `mermaid` visual of the resolved question graph, followed by the plan details.
 
 *Example Handoff Artifact Block:*
 Please copy the implementation plan below:
 
-```md
+````md
 # Implementation Plan: [ Feature Name ]
 
 ## Resolved Uncertainty Graph
@@ -95,4 +95,4 @@ graph TD
 * **Outcome:** Secure internal dashboard access.
 * **[P0] V1 Blockers:** Hardcoded isAdmin check on login.
 * **Out of Scope:** Full enterprise RBAC.
-```
+````

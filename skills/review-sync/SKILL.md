@@ -68,12 +68,12 @@ Replace the Telemetry Header with this exact terminal transition:
 `[■■■■] 100% ↔ | Graph Traversed → [⚡️] Ready for Copy`
 
 **Line 2+: The Artifact Block** 
-Output the final review inside a single raw markdown code block (` ```md `), containing *only* Accepted and Refined findings organized by Severity. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include a `mermaid` visual of the traversed risk graph, followed by the code review details.
+Output the final review inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. It should contain *only* Accepted and Refined findings organized by Severity. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include a `mermaid` visual of the traversed risk graph, followed by the code review details.
 
 *Example Handoff Artifact Block:*
 Please copy the code review below:
 
-```md
+````md
 # Code Review: [ Project Name ]
 
 ## Traversed Risk Graph
@@ -93,4 +93,4 @@ graph TD
   - return users.map(u => u.getProfile());
   + return db.users.with('profile').fetch();
   ```
-```
+````
