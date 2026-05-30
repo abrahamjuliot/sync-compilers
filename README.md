@@ -1,6 +1,6 @@
 # SKiLLS
 
-A collection of token-optimized agent personas that shift LLMs from "eager pleasers" into "exacting compilers." By forcing empirical decisions and structural clarity, these skills minimize hallucination and context drift, excelling anywhere technical ambiguity exists and trade-offs must be locked in.
+A collection of token-optimized agent personas that shift LLMs from "eager pleasers" into "exacting compilers." By utilizing emergent orchestrations like Branching Reality Trees, Faction Voting, and Self-Evolving Question Graphs, these skills map state spaces rather than flat conversation loops, driving technical ambiguity to structural clarity.
 
 ## Core Pattern
 
@@ -16,7 +16,7 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 ## Architecture & Design
 
-**[architect-sync](skills/architect-sync/)** – Interrogates system design proposals and forces decisions on concrete trade-offs (Eventual vs. Strong Consistency, Monolith vs. Microservices, etc.). *(Terminal: Architecture Decision Record)*
+**[architect-sync](skills/architect-sync/)** – System design via **Branching Reality Trees & Internal Political Systems**. Forks proposals into multiple architectural realities, allowing internal factions (Execution, Economist, SRE, Security) to debate and vote on trade-offs based on user constraints. *(Terminal: Architecture Decision Record)*
 
 **[api-sync](skills/api-sync/)** – Contract-driven design. Iterates over payload structures, idempotency, pagination, and error handling before code. *(Terminal: Valid OpenAPI/Swagger YAML)*
 
@@ -24,13 +24,13 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 ## Execution & Hardening
 
-**[plan-sync](skills/plan-sync/)** – Aggressively cuts scope to define a lean MVP, then extracts technical requirements through a telemetry-driven loop with strict empirical rigor. *(Terminal: Dense requirements handoff + MVP scope)*
+**[plan-sync](skills/plan-sync/)** – Aggressively cuts scope using a **Self-Evolving Question Graph**. It spawns Bayesian nodes targeted at the highest areas of uncertainty to define a lean MVP and vertically sliced execution plan. *(Terminal: Dense requirements handoff + MVP scope)*
 
-**[review-sync](skills/review-sync/)** – Multi-axis code review (correctness, readability, architecture, security, performance). Targets overly clever code and forces decisions between complex logic and flatter, procedural alternatives. *(Terminal: Structured review artifact)*
+**[review-sync](skills/review-sync/)** – Multi-axis code review mapped as a **Self-Evolving Question Graph**. Code smells become root nodes that organically grow to hunt systemic architectural flaws across the codebase. *(Terminal: Structured review artifact)*
 
-**[hack-sync](skills/hack-sync/)** – Adversarial threat modeling. Presents attack vectors (SSRF, IDOR, race conditions) one at a time and co-develops mitigations. *(Terminal: Security matrix + unified code patches)*
+**[hack-sync](skills/hack-sync/)** – Adversarial threat modeling using a **Self-Evolving Question Graph**. The attack surface expands dynamically; successfully defending a vector instantly mutates the graph to spawn bypasses. *(Terminal: Threat Model matrix + mitigation plan)*
 
-**[test-sync](skills/test-sync/)** – Edge-case discovery. Generates extreme, malicious, or unlikely scenarios. User accepts/dismisses whether the system needs to handle them. *(Terminal: Executable test suite)*
+**[test-sync](skills/test-sync/)** – Edge-case discovery powered by a **Self-Evolving Question Graph**. Evaluates how the system handles failures, dynamically branching into deeper tests for recovery mechanisms and error leaks. *(Terminal: Executable test suite)*
 
 ---
 
@@ -43,5 +43,5 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 ## How to Use
 
 **Compiler Skills** (plan-sync, review-sync, architect-sync, api-sync, hack-sync, test-sync, etc.):
-- **Scope:** Prompt with a scope or file path. Default: current branch diff.
-- **Rounds:** Specify the number of iterations. Default: 5 rounds of empirical refinement.
+- **Scope:** Prompt with a specific system architecture, PRD, or file path. Default: current branch diff.
+- **Execution:** The agent will dynamically navigate its structural space (Branching Reality Trees or Self-Evolving Question Graphs). Answer the forcing questions, provide constraints, and watch the state collapse until it reaches a terminal artifact.
