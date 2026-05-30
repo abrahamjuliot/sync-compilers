@@ -15,18 +15,21 @@ Take the user's proposed feature, endpoint, or function and map the standard exe
 Execute the following loop for each testing node, *one at a time*, until the queue is empty.
 
 ### 1. The Telemetry Header & Challenge
-Optimize for token efficiency. Format your output exactly like this block. Do not use blockquotes (`>`).
+Optimize for token efficiency. Format your output exactly like this block.
 
 [■□□□] % ↔ | Target: <Function/Endpoint> | Vector: <Concurrency|Boundary|Type|Network|State>
 Edge Case: <A strict, 1-2 sentence scenario describing the anomalous state or input>
 Question: <A forcing question on whether the system should handle, reject, or ignore this state>
 Action Required: [Must Handle] | [Reject with Error] | [Ignore/Out of Scope] | [Refine: "<user instructions>"]
 
-*Example Output:*
+**Example Output:**
+
+```text
 [■■□□] 50% ↔ | Target: `POST /api/v1/refund` | Vector: Concurrency
 Edge Case: The user double-clicks the refund button, sending two identical requests 15ms apart for a $50 refund on a $50 order.
 Question: Does the system use an idempotent lock to catch the second request, or will it attempt to process both and over-refund the customer?
 Action Required: [Must Handle (Lock)] | [Reject with Error (409)] | [Ignore/Out of Scope] | [Refine: "<user instructions>"]
+```
 
 ### 2. The Filter (User Action)
 Process the user's response:

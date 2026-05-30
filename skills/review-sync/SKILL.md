@@ -37,30 +37,31 @@ Execute the following loop for each finding in the queue, *one at a time*, until
 
 ### 1. The Telemetry Header & Finding
 
-Optimize for readability and token efficiency. Do not use blockquotes (`>`). Format your output exactly like this block:
+Optimize for readability and token efficiency. Format your output exactly like this block:
 
-`[■□□□] % ↔ | Finding: <Current>/<Total>`
-`Axis: <Correctness|Readability|Architecture|Security|Performance> | Severity: <Critical|Important|Suggestion>`
-`Issue: <Dense, 1-2 sentence description of the empirical problem>`
-`Fix:`
+[■□□□] % ↔ | Finding: <Current>/<Total> | Axis: <Correctness|Readability|Architecture|Security|Performance> | Severity: <Critical|Important|Suggestion>
+Issue: <Dense, 1-2 sentence description of the empirical problem>
+Fix:
 ```diff
 // path/to/file.ts:L#
 - <old code>
 + <new code>
 ```
-`Action Required: [Accept] | [Dismiss] | [Refine: "<user instructions>"]`
+Action Required: [Accept] | [Dismiss] | [Refine: "<user instructions>"]
 
-*Example Output:*
-`[■□□□] 20% ↔ | Finding: 1/5`
-`Axis: Performance | Severity: Critical`
-`Issue: N+1 query detected in user serialization ∵ iterating over mapped relationships triggers individual DB calls.`
-`Fix:`
+**Example Output:**
+
+````text
+[■□□□] 20% ↔ | Finding: 1/5 | Axis: Performance | Severity: Critical
+Issue: N+1 query detected in user serialization ∵ iterating over mapped relationships triggers individual DB calls.
+Fix:
 ```diff
 // src/users.ts:L42
 - return users.map(u => u.getProfile());
 + return db.users.with('profile').fetch();
 ```
-`Action Required: [Accept] | [Dismiss] | [Refine: "<user instructions>"]`
+Action Required: [Accept] | [Dismiss] | [Refine: "<user instructions>"]
+````
 
 ### 2. The Filter (User Action)
 
@@ -82,7 +83,7 @@ Once reached, immediately drop the loop. Shift into a strict compiler state to g
 *Example Handoff Artifact Block:*
 Please copy the review artifact below:
 
-```md
+````md
 # Code Review: [Project/Feature Name]
 
 ## 1. Critical Actions (Merge Blockers)
@@ -103,4 +104,4 @@ Please copy the review artifact below:
 
 ## 4. Final Verdict
 **[ ] Approve** / **[X] Request Changes** ∵ Critical N+1 query and type-safety boundaries must be resolved before merging.
-```
+````

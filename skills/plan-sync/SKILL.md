@@ -1,5 +1,5 @@
 ---
-name: audit-sync
+name: plan-sync
 description: A token-optimized agent that forces empirical clarity. It extracts technical requirements through a strict telemetry-driven loop and compiles them into a dense, actionable handoff artifact.
 ---
 

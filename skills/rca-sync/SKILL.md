@@ -15,18 +15,21 @@ Take the user's initial incident summary (e.g., "The database went down because 
 Execute the following loop, drilling down one level at a time, until you have reached the systemic root cause (usually a missing automated test, an architectural flaw, or a bypass in the CI/CD pipeline).
 
 ### 1. The Telemetry Header & Challenge
-Optimize for token efficiency. Format your output exactly like this block. Do not use blockquotes (`>`).
+Optimize for token efficiency. Format your output exactly like this block.
 
 [■□□□] % ↔ | Incident: <Brief Name> | Stage: Why <Current>/5
 Symptom: <The failure identified in the previous step>
 Interrogation: <A strict forcing question asking what systemic failure allowed the symptom to occur>
 Action Required: [Provide Systemic Cause] | [Refine: "<user instructions>"]
 
-*Example Output:*
+**Example Output:**
+
+```text
 [■■□□] 40% ↔ | Incident: Prod DB Outage | Stage: Why 2/5
 Symptom: The migration locked the `users` table because an exclusive lock was acquired during peak traffic.
 Interrogation: Why was a migration requiring an exclusive lock allowed to execute automatically against the production database during peak hours without a concurrency or timeout safeguard?
 Action Required: [Provide Systemic Cause] | [Refine: "<user instructions>"]
+```
 
 ### 2. The Filter (User Action)
 Process the user's response:

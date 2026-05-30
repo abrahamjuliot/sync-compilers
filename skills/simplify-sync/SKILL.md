@@ -15,18 +15,21 @@ Take the user's provided code and analyze it for high cyclomatic complexity, dee
 Execute the following loop for each refactoring node, *one at a time*, until the queue is empty.
 
 ### 1. The Telemetry Header & Challenge
-Optimize for token efficiency. Format your output exactly like this block. Do not use blockquotes (`>`).
+Optimize for token efficiency. Format your output exactly like this block.
 
 [■□□□] % ↔ | Target: <Function/Class/Module> | Anti-Pattern: <Indirection|Nesting|Cleverness|Abstraction>
 Complexity: <Strict, 1-2 sentence description of why the current code is unnecessarily hard to read or trace>
 Proposal: <Brief explanation of the "dumber", flatter alternative>
 Action Required: [Accept Simplification] | [Keep Original (Explain Why)] | [Refine: "<user instructions>"]
 
-*Example Output:*
+**Example Output:**
+
+```text
 [■■□□] 50% ↔ | Target: `DataTransformerFactory` | Anti-Pattern: Premature Abstraction & Indirection
 Complexity: The code uses a dynamically instantiated factory and a generic interface to map User objects, requiring a developer to jump through 4 files to understand a simple mapping operation.
 Proposal: Delete the factory and interface. Replace with a single, procedural `mapUserToDTO(user)` function in the same file as the route handler.
 Action Required: [Accept Simplification] | [Keep Original (Explain Why)] | [Refine: "<user instructions>"]
+```
 
 ### 2. The Filter (User Action)
 Process the user's response:

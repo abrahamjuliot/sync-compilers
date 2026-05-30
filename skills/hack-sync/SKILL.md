@@ -15,18 +15,21 @@ Take the user's proposed architecture, API, or codebase and map its attack surfa
 Execute the following loop for each attack node, *one at a time*, until the queue is empty.
 
 ### 1. The Telemetry Header & Challenge
-Optimize for token efficiency. Format your output exactly like this block. Do not use blockquotes (`>`).
+Optimize for token efficiency. Format your output exactly like this block.
 
 [■□□□] % ↔ | Target: <Component/Endpoint> | Vector: <IDOR|SSRF|Race Condition|etc>
 The Attack: <A strict, 1-2 sentence scenario of exactly how a malicious actor exploits this boundary>
 Question: <A forcing question demanding proof of defense or sanitization>
 Action Required: [Defended: "<explanation>"] | [Vulnerable: Propose Mitigation] | [Accept Risk]
 
-*Example Output:*
-[■■□□] 40% ↔ | Target: `POST /api/v1/workspaces/{id}/invite` | Vector: IDOR & Privilege Escalation
-The Attack: A user with "Viewer" permissions in Workspace A swaps the `{id}` payload to Workspace B, inviting themselves as an "Admin".
-Question: Where exactly in the middleware or controller is the authorization claim verified against the acting user's session and the target workspace ID?
+**Example Output:**
+
+```text
+[■■□□] 40% ↑ | Target: `POST /api/v1/orgs/:id/members` | Vector: IDOR
+Exploit: A user with `role: member` in Org A attempts to add a new admin to Org B by brute-forcing sequential Org IDs in the URL.
+Question: How does the system verify the caller has `role: admin` specifically for the `orgId` present in the URL, rather than just possessing a generic valid JWT?
 Action Required: [Defended: "<explanation>"] | [Vulnerable: Propose Mitigation] | [Accept Risk]
+```
 
 ### 2. The Filter (User Action)
 Process the user's response:

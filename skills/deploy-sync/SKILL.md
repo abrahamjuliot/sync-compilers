@@ -15,18 +15,21 @@ Take the user's proposed stack, testing framework, and hosting provider. Analyze
 Execute the following loop for each pipeline node, *one at a time*, until the queue is empty.
 
 ### 1. The Telemetry Header & Challenge
-Optimize for token efficiency. Format your output exactly like this block. Do not use blockquotes (`>`).
+Optimize for token efficiency. Format your output exactly like this block.
 
 [■□□□] % ↔ | Stage: <Build|Test|Deploy> | Constraint: <Caching|Triggers|Secrets|Concurrency>
 Bottleneck: <Strict, 1-2 sentence description of why the naive approach will waste time, money, or risk security>
 Question: <A forcing question presenting two concrete pipeline strategies>
 Action Required: [Choose A] | [Choose B] | [Refine: "<user instructions>"]
 
-*Example Output:*
-[■■□□] 50% ↔ | Stage: Test | Constraint: Triggers & Compute Cost
-Bottleneck: Running the full Playwright E2E test suite on every single commit to a PR will take 20 minutes and burn CI minutes rapidly.
-Question: Should we run E2E tests only when a PR is explicitly labeled `ready-for-review`, or only on merges to `main`?
-Action Required: [Label Trigger] | [Merge to Main] | [Refine: "<user instructions>"]
+**Example Output:**
+
+```text
+[■■□□] 40% ↔ | Stage: Testing | Axis: E2E Execution Time
+Bottleneck: Running Cypress E2E tests on every single PR commit takes 15 minutes, slowing down developer iteration velocity.
+Alternative: Move E2E tests to run *only* on merges to `main` or via a specific `[run-e2e]` PR label. Leave unit tests as the mandatory PR check.
+Action Required: [Move E2E to Main] | [Require Label for E2E] | [Keep E2E on all PRs] | [Refine: "<user instructions>"]
+```
 
 ### 2. The Filter (User Action)
 Process the user's response:

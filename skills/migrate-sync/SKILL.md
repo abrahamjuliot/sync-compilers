@@ -15,18 +15,21 @@ Take the user's proposed database schema change and analyze it against operation
 Execute the following loop for each decision node, *one at a time*, until the queue is empty.
 
 ### 1. The Telemetry Header & Challenge
-Optimize for token efficiency. Format your output exactly like this block. Do not use blockquotes (`>`).
+Optimize for token efficiency. Format your output exactly like this block.
 
 [■□□□] % ↔ | Target: <Table Name> | Risk: <Locking|Data Loss|Performance|Rollback|Backfill>
 Hazard: <Strict description of why this change will break production or cause downtime>
 Question: <A forcing question presenting safe, concrete migration strategies>
 Action Required: [Choose A] | [Choose B] | [Refine: "<user instructions>"]
 
-*Example Output:*
+**Example Output:**
+
+```text
 [■■□□] 50% ↔ | Target: `users` | Risk: Locking & Backfill
 Hazard: Adding a `NOT NULL` column `stripe_id` to a populated table without a default value will cause the migration to fail or lock the table during a massive rewrite.
 Question: Should we add it as `NULLABLE` first, run a background script to backfill it, and then add the `NOT NULL` constraint in a subsequent migration, or just use a default value of `'unassigned'`?
 Action Required: [Multi-step Backfill] | [Use Default Value] | [Refine: "<user instructions>"]
+```
 
 ### 2. The Filter (User Action)
 Process the user's response:

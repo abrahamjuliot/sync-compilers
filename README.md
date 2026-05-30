@@ -28,7 +28,7 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 ## Execution & Hardening
 
-**[audit-sync](skills/audit-sync/)** – Extracts technical requirements through a telemetry-driven loop with strict empirical rigor. *(Also serves as an alternative to general planning.* Terminal: Dense requirements handoff)*
+**[plan-sync](skills/plan-sync/)** – Extracts technical requirements through a telemetry-driven loop with strict empirical rigor. *(Terminal: Dense requirements handoff)*
 
 **[review-sync](skills/review-sync/)** – Multi-axis code review (correctness, readability, architecture, security, performance) through an interactive queue. *(Terminal: Structured review artifact)*
 
@@ -50,6 +50,6 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 ## How to Use
 
-**Compiler Skills** (audit-sync, review-sync, scope-sync, architect-sync, api-sync, hack-sync, test-sync, etc.):
+**Compiler Skills** (plan-sync, review-sync, scope-sync, architect-sync, api-sync, hack-sync, test-sync, etc.):
 - **Scope:** Prompt with a scope or file path. Default: current branch diff.
 - **Rounds:** Specify the number of iterations. Default: 5 rounds of empirical refinement.

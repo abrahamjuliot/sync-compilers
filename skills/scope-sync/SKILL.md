@@ -15,18 +15,21 @@ Take the user's initial brain-dump, PRD, or feature list and break it down into 
 Execute the following loop for each feature/item in the queue, *one at a time*, until the queue is empty.
 
 ### 1. The Telemetry Header & Challenge
-Optimize for token efficiency. Format your output exactly like this block. Do not use blockquotes (`>`).
+Optimize for token efficiency. Format your output exactly like this block.
 
 [■□□□] % ↔ | Item: <Current>/<Total> | Feature: <Name of Feature>
 Challenge: <Dense, 1-2 sentence explanation of why this might not be needed for V1, or how it introduces launch risk>
 Alternative: <The fastest, cheapest, or lowest-code way to bypass this requirement for now>
 Action Required: [Keep as V1 Blocker] | [Downgrade to Fast-Follow] | [Cut Entirely] | [Refine: "<user instructions>"]
 
-*Example Output:*
+**Example Output:**
+
+```text
 [■■□□] 50% ↔ | Item: 2/4 | Feature: Role-Based Access Control (RBAC)
 Challenge: Full RBAC tables are complex to migrate and test. Do we actually have multiple enterprise roles at launch, or just basic user separation?
 Alternative: Hardcode an `isAdmin` boolean on the User table. Revisit full RBAC when we hit 100 enterprise customers.
 Action Required: [Keep as V1 Blocker] | [Downgrade to Fast-Follow] | [Cut Entirely] | [Refine: "<user instructions>"]
+```
 
 ### 2. The Filter (User Action)
 Process the user's response to the current feature:

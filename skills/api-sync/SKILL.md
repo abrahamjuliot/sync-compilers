@@ -15,18 +15,21 @@ Take the user's proposed feature or API requirements and map them to standard RE
 Execute the following loop for each decision node, *one at a time*, until the queue is empty.
 
 ### 1. The Telemetry Header & Challenge
-Optimize for token efficiency. Format your output exactly like this block. Do not use blockquotes (`>`).
+Optimize for token efficiency. Format your output exactly like this block.
 
 [■□□□] % ↔ | Endpoint: <METHOD> <Path> | Axis: <Payload|Errors|Pagination|Idempotency|Auth>
 Gap: <Strict description of what is missing or loosely defined in the current concept>
 Question: <A forcing question presenting two concrete ways to handle the boundary>
 Action Required: [Choose A] | [Choose B] | [Refine: "<user instructions>"]
 
-*Example Output:*
+**Example Output:**
+
+```text
 [■■□□] 40% ↔ | Endpoint: POST /api/v1/payments | Axis: Idempotency
 Gap: Network failures during payment creation can lead to duplicate charges on retry if we do not enforce uniqueness.
 Question: Should we require a client-generated `Idempotency-Key` header, or derive uniqueness from a combination of `userId` and `orderId` in the payload?
 Action Required: [Require Header] | [Derive from Payload] | [Refine: "<user instructions>"]
+```
 
 ### 2. The Filter (User Action)
 Process the user's response:
