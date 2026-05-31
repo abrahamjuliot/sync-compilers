@@ -44,7 +44,7 @@ Replace the Telemetry Header with this exact terminal transition:
 `[■■■■] 100% ↔ | Attack Graph Exhausted → [⚡️] Ready for Export`
 
 *Line 2+: The Artifact Block*
-Output the final Threat Model inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. Do not attempt to write to a file, and do not include any conversational filler outside of this block. The artifact MUST include a `mermaid` visual of the resolved attack graph, followed by the mitigation matrix.
+Output the final Threat Model inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. Do not attempt to write to a file, and do not include any conversational filler outside of this block. The artifact MUST include an `ASCII/Unicode tree` visual of the resolved attack graph, followed by the mitigation matrix.
 
 *Example Handoff Artifact Block:*
 Please copy the Threat Model below:
@@ -53,12 +53,10 @@ Please copy the Threat Model below:
 # Threat Model: [ System Name ]
 
 ## Resolved Attack Graph
-```mermaid
-graph TD
-  A[Public API] --> B[Rate Limiting]
-  B -->|Defended: AWS WAF| C[WAF Bypass]
-  C -->|Vulnerable: Request Smuggling| D(Mitigation: Enforce HTTP/2)
-```
+Public API
+└─ Rate Limiting
+   └─ [Defended: AWS WAF] WAF Bypass
+      └─ [Vulnerable: Request Smuggling] Mitigation: Enforce HTTP/2
 
 ## 1. Verified Defenses
 * **Vector:** SSRF on Webhook URL Input

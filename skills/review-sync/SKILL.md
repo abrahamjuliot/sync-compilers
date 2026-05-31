@@ -70,7 +70,7 @@ Replace the Telemetry Header with this exact terminal transition:
 `[■■■■] 100% ↔ | Graph Traversed → [⚡️] Ready for Copy`
 
 **Line 2+: The Artifact Block** 
-Output the final review inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. It should contain *only* Accepted and Refined findings organized by Severity. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include a `mermaid` visual of the traversed risk graph, followed by the code review details.
+Output the final review inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. It should contain *only* Accepted and Refined findings organized by Severity. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include an `ASCII/Unicode tree` visual of the traversed risk graph, followed by the code review details.
 
 *Example Handoff Artifact Block:*
 Please copy the code review below:
@@ -79,13 +79,11 @@ Please copy the code review below:
 # Code Review: [ Project Name ]
 
 ## Traversed Risk Graph
-```mermaid
-graph TD
-  A[Data Access] --> B[Readability]
-  B --> C[N+1 Query in Users]
-  C -->|Mutated: Spawned DB Checks| D[N+1 Query in Posts]
-  D -->|Accepted Fix| E(Use .with() eager loading)
-```
+Data Access
+└─ Readability
+   └─ N+1 Query in Users
+      └─ [Mutated: Spawned DB Checks] N+1 Query in Posts
+         └─ [Accepted Fix] Use .with() eager loading
 
 ## 1. Critical Actions
 * **[Performance]** N+1 query in user serialization.

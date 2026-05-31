@@ -77,7 +77,7 @@ Replace the Telemetry Header with this exact terminal transition:
 `[■■■■] 100% ↔ | Graph Resolved → [⚡️] Ready for Copy`
 
 **Line 2+: The Artifact Block**
-Output the plan inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include a `mermaid` visual of the resolved question graph, followed by the plan details.
+Output the plan inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include an `ASCII/Unicode tree` visual of the resolved question graph, followed by the plan details.
 
 *Example Handoff Artifact Block:*
 Please copy the implementation plan below:
@@ -86,12 +86,10 @@ Please copy the implementation plan below:
 # Implementation Plan: [ Feature Name ]
 
 ## Resolved Uncertainty Graph
-```mermaid
-graph TD
-  A[Auth] --> B[Permissions]
-  B --> C[Roles]
-  C -->|Resolved| D(Hardcoded isAdmin boolean)
-```
+Auth
+└─ Permissions
+   └─ Roles
+      └─ [Resolved] Hardcoded isAdmin boolean
 
 ## 1. MVP Scope & Constraints
 * **Outcome:** Secure internal dashboard access.
