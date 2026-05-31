@@ -43,13 +43,13 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 Install all skills simultaneously:
 
 ```bash
-npx skills@latest add abrahamjuliot/skills --all -g
+npx skills@latest add abrahamjuliot/sync-compilers --all -g
 ```
 
 Or install a specific skill directly:
 
 ```bash
-npx skills@latest add abrahamjuliot/skills/skills --skill <skill-name> -g
+npx skills@latest add abrahamjuliot/sync-compilers --skill <skill-name> -g
 ```
 
 ## Execution Workflow
