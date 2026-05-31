@@ -41,7 +41,7 @@ npx skills@latest add abrahamjuliot/skills --all
 Or install a specific skill directly:
 
 ```bash
-npx skills@latest add abrahamjuliot/skills/skills/api-sync
+npx skills@latest add abrahamjuliot/skills/skills/plan-sync
 ```
 
 ### How to Use
