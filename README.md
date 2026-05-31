@@ -57,3 +57,10 @@ npx skills@latest add abrahamjuliot/sync-compilers --skill <skill-name> -g
 * **Scope:** Prompt the agent with a specific PRD, system architecture, or file path. (Defaults to the current branch diff).
 * **Interrogate:** The agent will not generate a final output immediately. Instead, it maps the structural space and asks forcing questions to lock down your constraints.
 * **Compile:** Answer the prompts. Your decisions collapse the ambiguity, driving the agent to emit a precise, production-ready terminal artifact.
+
+## Acknowledgements
+
+A quick nod to a few projects that helped inspire concepts used here:
+
+* [agent-skills](https://github.com/addyosmani/agent-skills)
+* [mattpocock/skills](https://github.com/mattpocock/skills)
