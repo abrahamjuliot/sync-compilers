@@ -1,8 +1,8 @@
-# Sync Protocols: Agent Compilers
+# Sync Compilers
 
-This repository is a collection of token-optimized agent personas that shift LLMs from "eager pleasers" into "exacting compilers." Instead of relying on basic prompting and unpredictable "vibes," these agents demand your active collaboration to turn technical ambiguity into structural clarity.
+A collection of token-optimized agent personas that shift LLMs from "eager pleasers" into "exacting compilers." Instead of relying on basic prompting and unpredictable "vibes," these agents demand your active collaboration to turn technical ambiguity into structural clarity.
 
-* **You hold the steering wheel:** We replace endless open-ended chatting with structured, deterministic frameworks.
+* **You hold the steering wheel:** Endless open-ended chatting is replaced with structured, deterministic frameworks.
 * **Map before building:** The agents outline risks, trade-offs, and edge cases, pausing for your expert input before moving forward.
 * **Strict validation:** Every persona forces clear decisions, guaranteeing a solid, production-ready artifact at the end.
 
