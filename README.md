@@ -1,6 +1,10 @@
-# SKiLLS
+# Sync Protocols: Agent Compilers
 
-A collection of token-optimized agent personas that shift LLMs from "eager pleasers" into "exacting compilers." By utilizing emergent orchestrations like Branching Reality Trees, Faction Voting, and Self-Evolving Question Graphs, these skills map state spaces rather than flat conversation loops, driving technical ambiguity to structural clarity.
+This repository is a collection of token-optimized agent personas that shift LLMs from "eager pleasers" into "exacting compilers." Instead of relying on basic prompting and unpredictable "vibes," these agents demand your active collaboration to turn technical ambiguity into structural clarity.
+
+* **You hold the steering wheel:** We replace endless open-ended chatting with structured, deterministic frameworks.
+* **Map before building:** The agents outline risks, trade-offs, and edge cases, pausing for your expert input before moving forward.
+* **Strict validation:** Every persona forces clear decisions, guaranteeing a solid, production-ready artifact at the end.
 
 ## Core Pattern
 
@@ -8,23 +12,31 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 ### Product & Scope
 
-- **[pitch-sync](skills/pitch-sync/SKILL.md)** – Gamified investor interrogation gauntlet to stress-test product ideas. *(Terminal: Professional Lean Canvas)*
+*Stress-tests early product assumptions by employing gamified gauntlets to validate business logic.*
+
+- **[pitch-sync](skills/pitch-sync/SKILL.md)** – Investor interrogation agent validating product ideas. *(Terminal: Professional Lean Canvas)*
 
 ### Architecture & Design
 
-- **[architect-sync](skills/architect-sync/SKILL.md)** – System design via **Branching Reality Trees & Internal Political Systems**. *(Terminal: Architecture Decision Record)*
-- **[api-sync](skills/api-sync/SKILL.md)** – Schematic Constraint Matrix engine using Wave Function Collapse principles. *(Terminal: Production OpenAPI Specification)*
+*Leverages Branching Reality Trees and Wave Function Collapse principles to explore architectural constraints and resolve conflicts.*
+
+- **[architect-sync](skills/architect-sync/SKILL.md)** – System design agent resolving structural conflicts through internal political systems. *(Terminal: Architecture Decision Record)*
+- **[api-sync](skills/api-sync/SKILL.md)** – Schematic constraint matrix engine defining tight API specifications. *(Terminal: Production OpenAPI Specification)*
 
 ### Execution & Hardening
 
-- **[plan-sync](skills/plan-sync/SKILL.md)** – Aggressively cuts scope using a **Self-Evolving Question Graph**. *(Terminal: Dense requirements handoff + MVP scope)*
-- **[review-sync](skills/review-sync/SKILL.md)** – Multi-axis code review mapped as a **Self-Evolving Question Graph**. *(Terminal: Structured review artifact)*
-- **[hack-sync](skills/hack-sync/SKILL.md)** – Adversarial threat modeling using a **Self-Evolving Question Graph**. *(Terminal: Threat Model Matrix)*
-- **[test-sync](skills/test-sync/SKILL.md)** – Edge-case discovery powered by a **Self-Evolving Question Graph**. *(Terminal: Executable test suite)*
+*Utilizes a **Self-Evolving Question Graph** to dynamically navigate technical ambiguity. Instead of flat lists, these agents branch into edge cases based on user responses to compile precise terminal artifacts.*
+
+- **[plan-sync](skills/plan-sync/SKILL.md)** – Foundational planning agent that ruthlessly cuts MVP scope. *(Terminal: Execution plan & MVP scope)*
+- **[review-sync](skills/review-sync/SKILL.md)** – Bayesian code analysis hunting for systemic architectural flaws. *(Terminal: Structured review artifact)*
+- **[hack-sync](skills/hack-sync/SKILL.md)** – Adversarial threat-modeling agent mapping attack surfaces. *(Terminal: Threat Model Matrix)*
+- **[test-sync](skills/test-sync/SKILL.md)** – QA engineer proactively discovering complex edge cases. *(Terminal: Executable test suite)*
 
 ### DevOps & Operations
 
-- **[deploy-sync](skills/deploy-sync/SKILL.md)** – Transactional DevOps validation loop functioning as an ACID-compliant state machine. *(Terminal: Validated CI/CD Manifest)*
+*Applies ACID-compliant state machines to build resilient deployment pipelines and validation loops.*
+
+- **[deploy-sync](skills/deploy-sync/SKILL.md)** – DevOps validation agent managing deployment state transitions. *(Terminal: Validated CI/CD Manifest)*
 
 ### Installation
 
