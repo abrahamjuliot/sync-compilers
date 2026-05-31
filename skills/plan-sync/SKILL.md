@@ -32,6 +32,8 @@ Missing Context: <Why the hypothesis is unconfirmed>
 > Q: <Exactly one focused question to resolve this specific node>
 Action Required: [Confirm Hypothesis] | [Reject: Provide Alternative] | [Refine: "<user instructions>"]
 
+**CRITICAL: You MUST STOP generating output immediately after this block and wait for the user to respond. Do NOT hallucinate the user's response.**
+
 **Example Output:**
 
 ```text

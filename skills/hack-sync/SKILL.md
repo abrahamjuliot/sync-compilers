@@ -27,6 +27,8 @@ The Attack: <A strict, 1-2 sentence scenario of exactly how a malicious actor ex
 Question: <A forcing question demanding proof of defense or sanitization>
 Action Required: [Defended: "<explanation>"] | [Vulnerable: Propose Mitigation] | [Accept Risk]
 
+**CRITICAL: You MUST STOP generating output immediately after this block and wait for the user to respond. Do NOT hallucinate the user's response.**
+
 ### 2. The Graph Mutation (User Action)
 Process the user's response:
 - *Defended:* The user explains their defense (e.g., "We use a WAF"). If weak, reject it. If valid, **Mutate the Graph:** Spawn a new child node to bypass that specific defense (e.g., "WAF Bypass via Request Smuggling"). Attack the new node.

@@ -23,6 +23,8 @@ Edge Case: <A strict, 1-2 sentence scenario describing the anomalous state or in
 Question: <A forcing question on how the system responds to this specific anomaly>
 Action Required: [Must Handle] | [Reject with Error] | [Ignore/Out of Scope] | [Refine: "<user instructions>"]
 
+**CRITICAL: You MUST STOP generating output immediately after this block and wait for the user to respond. Do NOT hallucinate the user's response.**
+
 ### 2. The Graph Mutation (User Action)
 Process the user's response:
 - *Must Handle:* The system must recover or handle this gracefully. **Mutate the Graph:** Spawn deeper edge cases testing the *recovery mechanism itself* (e.g., "If it retries, what if the retry stampedes the DB?"). Move to the new node.

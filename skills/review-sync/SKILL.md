@@ -36,6 +36,8 @@ Fix/Proposal:
 Question: <A forcing question to determine if this pattern is repeated elsewhere, spawning new nodes>
 Action Required: [Accept] | [Dismiss] | [Refine: "<user instructions>"]
 
+**CRITICAL: You MUST STOP generating output immediately after this block and wait for the user to respond. Do NOT hallucinate the user's response.**
+
 **Example Output:**
 
 ````text
