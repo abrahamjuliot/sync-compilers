@@ -6,21 +6,15 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 **[efficient-protocol](skills/efficient-protocol/SKILL.md)** – Semantic compression protocol for max technical density and minimal token usage. *(Requires `AGENTS.md`)*
 
----
-
 ## Product & Scope
 
 **[pitch-sync](skills/pitch-sync/SKILL.md)** – Gamified investor interrogation gauntlet to stress-test product ideas. *(Terminal: Professional Lean Canvas)*
-
----
 
 ## Architecture & Design
 
 **[architect-sync](skills/architect-sync/SKILL.md)** – System design via **Branching Reality Trees & Internal Political Systems**. *(Terminal: Architecture Decision Record)*
 
 **[api-sync](skills/api-sync/SKILL.md)** – Schematic Constraint Matrix engine using Wave Function Collapse principles. *(Terminal: Production OpenAPI Specification)*
-
----
 
 ## Execution & Hardening
 
@@ -32,29 +26,23 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 **[test-sync](skills/test-sync/SKILL.md)** – Edge-case discovery powered by a **Self-Evolving Question Graph**. *(Terminal: Executable test suite)*
 
----
-
 ## DevOps & Operations
 
 **[deploy-sync](skills/deploy-sync/SKILL.md)** – Transactional DevOps validation loop functioning as an ACID-compliant state machine. *(Terminal: Validated CI/CD Manifest)*
-
----
 
 ## Installation
 
 Install all skills in the repository simultaneously:
 
 ```bash
-gh skill install abrahamjuliot/skills
+npx skills@latest add abrahamjuliot/skills --all
 ```
 
 Or install a specific skill directly:
 
 ```bash
-gh skill install abrahamjuliot/skills/skills/api-sync
+npx skills@latest add abrahamjuliot/skills/skills/api-sync
 ```
-
----
 
 ## How to Use
 
