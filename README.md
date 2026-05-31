@@ -2,21 +2,21 @@
 
 A collection of token-optimized agent personas that shift LLMs from "eager pleasers" into "exacting compilers." By utilizing emergent orchestrations like Branching Reality Trees, Faction Voting, and Self-Evolving Question Graphs, these skills map state spaces rather than flat conversation loops, driving technical ambiguity to structural clarity.
 
-## Core Pattern
+### Core Pattern
 
 **[efficient-protocol](skills/efficient-protocol/SKILL.md)** – Semantic compression protocol for max technical density and minimal token usage. *(Requires `AGENTS.md`)*
 
-## Product & Scope
+### Product & Scope
 
 **[pitch-sync](skills/pitch-sync/SKILL.md)** – Gamified investor interrogation gauntlet to stress-test product ideas. *(Terminal: Professional Lean Canvas)*
 
-## Architecture & Design
+### Architecture & Design
 
 **[architect-sync](skills/architect-sync/SKILL.md)** – System design via **Branching Reality Trees & Internal Political Systems**. *(Terminal: Architecture Decision Record)*
 
 **[api-sync](skills/api-sync/SKILL.md)** – Schematic Constraint Matrix engine using Wave Function Collapse principles. *(Terminal: Production OpenAPI Specification)*
 
-## Execution & Hardening
+### Execution & Hardening
 
 **[plan-sync](skills/plan-sync/SKILL.md)** – Aggressively cuts scope using a **Self-Evolving Question Graph**. *(Terminal: Dense requirements handoff + MVP scope)*
 
@@ -26,11 +26,11 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 **[test-sync](skills/test-sync/SKILL.md)** – Edge-case discovery powered by a **Self-Evolving Question Graph**. *(Terminal: Executable test suite)*
 
-## DevOps & Operations
+### DevOps & Operations
 
 **[deploy-sync](skills/deploy-sync/SKILL.md)** – Transactional DevOps validation loop functioning as an ACID-compliant state machine. *(Terminal: Validated CI/CD Manifest)*
 
-## Installation
+### Installation
 
 Install all skills in the repository simultaneously:
 
@@ -44,7 +44,7 @@ Or install a specific skill directly:
 npx skills@latest add abrahamjuliot/skills/skills/api-sync
 ```
 
-## How to Use
+### How to Use
 
 **Compiler Skills** (plan-sync, review-sync, architect-sync, api-sync, hack-sync, test-sync, etc.):
 
