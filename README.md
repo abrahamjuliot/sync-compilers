@@ -52,9 +52,8 @@ Or install a specific skill directly:
 npx skills@latest add abrahamjuliot/skills/skills --skill <skill-name> -g
 ```
 
-### How to Use
+## Execution Workflow
 
-**Compiler Skills** (plan-sync, review-sync, architect-sync, api-sync, hack-sync, test-sync, etc.):
-
-- **Scope:** Prompt with a specific system architecture, PRD, or file path. Default: current branch diff.
-- **Execution:** The agent will dynamically navigate its structural space (Branching Reality Trees or Self-Evolving Question Graphs). Answer the forcing questions, provide constraints, and watch the state collapse until it reaches a terminal artifact.
+* **Scope:** Prompt the agent with a specific PRD, system architecture, or file path. (Defaults to the current branch diff).
+* **Interrogate:** The agent will not generate a final output immediately. Instead, it maps the structural space and asks forcing questions to lock down your constraints.
+* **Compile:** Answer the prompts. Your decisions collapse the ambiguity, driving the agent to emit a precise, production-ready terminal artifact.
