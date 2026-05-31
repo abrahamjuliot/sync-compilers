@@ -36,7 +36,7 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 ## DevOps & Operations
 
-**[deploy-sync](skills/deploy-sync/SKILL.md)** – Pipeline engineering. Forces decisions on caching, secrets, build times, matrix testing, and deployment triggers. *(Terminal: Configured CI/CD YAML)*
+**[deploy-sync](skills/deploy-sync/SKILL.md)** – Transactional DevOps validation loop. Manages the context window as an ACID-compliant state machine to isolate and abort unverified pipeline configurations, guaranteeing a sterile compilation environment. *(Terminal: Validated CI/CD Manifest)*
 
 ---
 
