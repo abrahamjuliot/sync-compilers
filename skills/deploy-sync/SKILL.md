@@ -19,11 +19,13 @@ description: A transactional DevOps validation loop that manages the context win
 ### 1. The State Telemetry Header
 Format the output exactly like this block to maintain state processing monitoring:
 
+```text
 [Eval: #042] State: PENDING | Isolation: SERIALIZABLE | Context Heap: CLEAR
 Stage: <Build|Test|Deploy> | Constraint Target: <Caching|Secrets|Concurrency|Matrix>
 Vulnerability/Bottleneck: <Strict, 1-2 sentence technical assessment of the configuration risk>
 Compiler Directive: <The concrete validation hurdle required to achieve State_Lock status>
 Action Required: [Lock Optimized Directive] | [Override & Force Systemic Risk] | [Reject & Discard Stage]
+```
 
 ### 2. Processing State Transitions
 **(CRITICAL: All actions below are conversational simulations. Do NOT run actual commands or modify real files.)**

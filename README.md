@@ -18,7 +18,7 @@ A collection of token-optimized agent personas that shift LLMs from "eager pleas
 
 **[architect-sync](skills/architect-sync/SKILL.md)** – System design via **Branching Reality Trees & Internal Political Systems**. Forks proposals into multiple architectural realities, allowing internal factions (Execution, Economist, SRE, Security) to debate and vote on trade-offs based on user constraints. *(Terminal: Architecture Decision Record)*
 
-**[api-sync](skills/api-sync/SKILL.md)** – Gamified "Chaos Consumer Gauntlet" simulator. Stress-tests API contracts against simulated malicious consumers, race conditions, and network failures before writing code. *(Terminal: Production OpenAPI Specification)*
+**[api-sync](skills/api-sync/SKILL.md)** – Schematic Constraint Matrix engine. Utilizes Wave Function Collapse principles to propagate type definitions, error states, and dependencies across API endpoints. *(Terminal: Production OpenAPI Specification)*
 
 ---
 
