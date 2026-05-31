@@ -45,7 +45,7 @@ The agent aggregates all logged "Structural Debt" risks and launches a rapid-fir
 ## Exit Condition & Clean Asset Handoff
 Once the Gauntlet is cleared, replace the Telemetry Header with this exact terminal transition:
 
-[⚡️] Gauntlet Survived | Term Sheet Signed -> Generating Clean Lean Canvas Artifact
+`[⚡️] Gauntlet Survived | Term Sheet Signed -> Generating Clean Lean Canvas Artifact`
 
 Output the final strategy inside a single raw markdown code block ( ```md ). Use zero conversational fluff or game elements outside of this block.
 

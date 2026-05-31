@@ -33,7 +33,7 @@ Action Required: [Collapse State A (Resolves Vector X, Y)] | [Collapse State B (
 ## Exit Condition & Structural Handoff
 When the schema matrix is 100% collapsed and all structural invariants are resolved, clear the Matrix Telemetry Header and emit the final transition:
 
-[RESOLVED] Schema Matrix Satisfied ──> [⚡️] Emitting Production OpenAPI Contract
+`[RESOLVED] Schema Matrix Satisfied ──> [⚡️] Emitting Production OpenAPI Contract`
 
 Output the final specification inside a single raw markdown code block ( ```yaml ). Include zero conversational text, structural summaries, or formatting wrappers outside of this block.
 

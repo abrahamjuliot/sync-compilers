@@ -41,7 +41,7 @@ The loop breaks when one branch achieves a 100% Yes vote from all factions (or u
 Once reached, drop the loop. Shift into a strict compiler state.
 
 *Line 1: Execution State*
-[■■■■] 100% ↔ | Reality Collapsed → [⚡️] Ready for Export
+`[■■■■] 100% ↔ | Reality Collapsed → [⚡️] Ready for Export`
 
 *Line 2+: The Artifact Block*
 Output the final ADR inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. Do not attempt to write to a file, and do not include any conversational filler outside of this block. The artifact MUST include a `mermaid` visual of the collapsed architecture, followed by the context, decisions, and accepted risks.

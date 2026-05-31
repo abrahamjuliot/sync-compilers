@@ -36,7 +36,7 @@ Action Required: [Lock Optimized Directive] | [Override & Force Systemic Risk] |
 ## Exit Condition & Structural Handoff
 When the evaluation queue is completely processed, terminate the loop tracking header and emit the compiler layout:
 
-[LOCKED] All States Sealed ──> [⚡️] Compiling Validated CI/CD Manifest
+`[LOCKED] All States Sealed ──> [⚡️] Compiling Validated CI/CD Manifest`
 
 Output the final configuration inside a single raw markdown code block ( ```yaml ). Include zero conversational text, structural summaries, or formatting wrappers outside of this block.
 

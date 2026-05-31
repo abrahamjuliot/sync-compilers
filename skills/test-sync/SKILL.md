@@ -36,7 +36,7 @@ Once reached, immediately drop the loop. Shift into a strict compiler state to g
 
 *Line 1: Execution State*
 Replace the Telemetry Header with this exact terminal transition:
-[■■■■] 100% ↔ | Failure Graph Traversed → [⚡️] Ready for Export
+`[■■■■] 100% ↔ | Failure Graph Traversed → [⚡️] Ready for Export`
 
 *Line 2+: The Artifact Block*
 Output the final testing plan inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include a `mermaid` visual of the traversed failure graph, followed by a concise checklist of the required edge case tests and their expected assertions. **Do not output a massive executable test suite.** Optimize for tokens by using dense bullet points.
