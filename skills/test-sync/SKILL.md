@@ -1,6 +1,6 @@
 ---
 name: test-sync
-description: An adversarial testing agent using a Self-Evolving Question Graph. It dynamically maps failure states, branching into increasingly complex edge cases based on the architecture's error handling, before outputting a targeted test suite.
+description: Adversarial testing agent generating targeted QA test suites.
 ---
 
 ## Execution Scope

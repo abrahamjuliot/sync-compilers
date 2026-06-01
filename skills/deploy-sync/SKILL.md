@@ -1,6 +1,6 @@
 ---
 name: deploy-sync
-description: A transactional DevOps validation loop that manages the context window as an ACID-compliant state machine, isolating unverified configuration changes in ephemeral transaction blocks to guarantee a sterile and secure compilation environment.
+description: Transactional DevOps validation agent for secure CI/CD pipelines.
 ---
 
 ## Execution Scope

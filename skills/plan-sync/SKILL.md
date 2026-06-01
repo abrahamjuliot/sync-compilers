@@ -1,6 +1,6 @@
 ---
 name: plan-sync
-description: A foundational planning agent using a Self-Evolving Question Graph. Instead of a linear list, it maps out product requirements as a graph of uncertainties, dynamically generating new question nodes to collapse ambiguity before compiling a vertically sliced execution plan.
+description: Planning agent resolving ambiguity into actionable execution plans.
 ---
 
 ## Execution Scope

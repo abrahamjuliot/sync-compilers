@@ -1,6 +1,6 @@
 ---
 name: pitch-sync
-description: An adversarial, game-loop-driven validation agent that treats product stress-testing as an investor interrogation gauntlet. Survival outputs a professional, production-ready Lean Canvas.
+description: Investor interrogation agent outputting a production-ready Lean Canvas.
 ---
 
 ## Execution Scope

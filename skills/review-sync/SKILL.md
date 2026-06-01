@@ -1,6 +1,6 @@
 ---
 name: review-sync
-description: A code review agent utilizing a Self-Evolving Question Graph to perform Bayesian code analysis. Instead of a flat list of findings, it uses code smells as root nodes to dynamically hunt for systemic architectural flaws.
+description: Bayesian code review agent hunting for systemic architectural flaws.
 ---
 
 ## Execution Scope

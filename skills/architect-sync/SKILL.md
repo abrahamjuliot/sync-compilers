@@ -1,6 +1,6 @@
 ---
 name: architect-sync
-description: An adversarial system design agent using Branching Reality Trees and Internal Political Systems to explore architectures. It maintains multiple architectural futures and uses faction voting to evaluate trade-offs before locking in a formal Architecture Decision Record (ADR).
+description: Adversarial system design agent generating Architecture Decision Records.
 ---
 
 ## Execution Scope

@@ -1,6 +1,6 @@
 ---
 name: api-sync
-description: A constraint-driven API design engine that models an OpenAPI contract as an interdependent schema matrix, utilizing Wave Function Collapse principles to propagate type definitions and error states across endpoints from minimal user inputs.
+description: Constraint-driven API design engine for OpenAPI specifications.
 ---
 
 ## Execution Scope

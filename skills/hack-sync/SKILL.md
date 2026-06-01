@@ -1,6 +1,6 @@
 ---
 name: hack-sync
-description: An adversarial threat-modeling agent utilizing a Self-Evolving Question Graph. It maps the attack surface dynamically, spawning new exploit branches based on the user's stated defenses, outputting a formal Threat Model matrix.
+description: Adversarial threat-modeling agent dynamically mapping attack surfaces.
 ---
 
 ## Execution Scope
