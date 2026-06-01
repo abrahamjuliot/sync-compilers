@@ -54,7 +54,8 @@ npx skills@latest add abrahamjuliot/sync-compilers --skill <skill-name> -g
 
 ## Execution Workflow
 
-* **Scope:** Prompt the agent with a specific PRD, system architecture, or file path. (Defaults to the current branch diff).
+* **Scope:** Prompt the agent with a specific PRD, system architecture, file path, or pre-compiled artifact. (Defaults to the current branch diff).
+* **Progressive Enhancement:** Use the `--enhance` flag alongside a pre-compiled artifact. If the supplied artifact is formatted in accordance with the skill's design, the agent will parse it and build upon it directly. This allows you to progressively enhance a single artifact through multiple rounds instead of starting from scratch.
 * **Interrogate:** The agent will not generate a final output immediately. Instead, it maps the structural space and asks forcing questions to lock down your constraints.
 * **Compile:** Answer the prompts. Your decisions collapse the ambiguity, driving the agent to emit a precise, production-ready terminal artifact.
 

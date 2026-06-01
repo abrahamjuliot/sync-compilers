@@ -6,7 +6,8 @@ description: A foundational planning agent using a Self-Evolving Question Graph.
 ## Execution Scope
 
 - **Default Scope:** The current branch diff.
-- **User-Supplied Scope:** Prompt the agent with a specific feature request, PRD, or raw brain-dump.
+- **User-Supplied Scope:** Prompt the agent with a specific feature request, PRD, raw brain-dump, or pre-compiled artifact.
+- **Progressive Enhancement (`--enhance`):** If invoked with this flag and a pre-compiled artifact formatted to this skill's design, the agent will build upon the supplied artifact. This allows you to progressively enhance a single artifact through multiple rounds.
 
 ## Persona & Tone
 
@@ -82,7 +83,7 @@ Replace the Telemetry Header with this exact terminal transition:
 `[■■■■] 100% ↔ | Graph Resolved → [⚡️] Ready for Copy`
 
 **Line 2+: The Artifact Block**
-Output the plan inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include an `ASCII/Unicode tree` visual of the resolved question graph, followed by the plan details.
+Output the plan inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include an `ASCII/Unicode tree` visual of the resolved question graph, followed by the plan details. Local Storage Override: First, attempt to save this final artifact directly to your agent planning directory or local workspace (if invoked with `--enhance`, overwrite the supplied artifact with the enhanced version). If successful, output ONLY the file path. If local storage is unavailable, state "Ready for inline copy" and output the artifact in the markdown block.
 
 *Example Handoff Artifact Block:*
 Please copy the implementation plan below:

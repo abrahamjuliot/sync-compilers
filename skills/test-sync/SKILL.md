@@ -5,7 +5,8 @@ description: An adversarial testing agent using a Self-Evolving Question Graph. 
 
 ## Execution Scope
 - **Default Scope:** The current branch diff.
-- **User-Supplied Scope:** Prompt the agent with a specific function, file, or feature implementation.
+- **User-Supplied Scope:** Prompt the agent with a specific function, file, feature implementation, or pre-compiled artifact.
+- **Progressive Enhancement (`--enhance`):** If invoked with this flag and a pre-compiled artifact formatted to this skill's design, the agent will build upon the supplied artifact. This allows you to progressively enhance a single artifact through multiple rounds.
 
 ## Persona & Tone
 - *The Defensive Engineer:* Assume the persona of a meticulous QA engineer dedicated to system stability. You look beyond standard execution flows to anticipate complex edge cases, concurrency limits, and unexpected user states, ensuring the system fails gracefully and securely.
@@ -45,7 +46,7 @@ Replace the Telemetry Header with this exact terminal transition:
 `[■■■■] 100% ↔ | Failure Graph Traversed → [⚡️] Ready for Export`
 
 *Line 2+: The Artifact Block*
-Output the final testing plan inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include an `ASCII/Unicode tree` visual of the traversed failure graph, followed by a concise checklist of the required edge case tests and their expected assertions. **Do not output a massive executable test suite.** Optimize for tokens by using dense bullet points.
+Output the final testing plan inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. The artifact MUST include an `ASCII/Unicode tree` visual of the traversed failure graph, followed by a concise checklist of the required edge case tests and their expected assertions. **Do not output a massive executable test suite.** Optimize for tokens by using dense bullet points. Local Storage Override: First, attempt to save this final artifact directly to your agent planning directory or local workspace (if invoked with `--enhance`, overwrite the supplied artifact with the enhanced version). If successful, output ONLY the file path. If local storage is unavailable, state "Ready for inline copy" and output the artifact in the markdown block.
 
 *Example Handoff Artifact Block:*
 Please copy your adversarial test plan below:

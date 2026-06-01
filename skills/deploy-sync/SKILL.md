@@ -5,7 +5,8 @@ description: A transactional DevOps validation loop that manages the context win
 
 ## Execution Scope
 - **Default Scope:** The current branch diff.
-- **User-Supplied Scope:** Prompt the agent with a specific deployment manifest, infrastructure code, or CI/CD requirement.
+- **User-Supplied Scope:** Prompt the agent with a specific deployment manifest, infrastructure code, CI/CD requirement, or pre-compiled artifact.
+- **Progressive Enhancement (`--enhance`):** If invoked with this flag and a pre-compiled artifact formatted to this skill's design, the agent will build upon the supplied artifact. This allows you to progressively enhance a single artifact through multiple rounds.
 
 ## Persona & Tone
 - *The Rigorous SRE:* Assume the perspective of an uncompromising infrastructure architect dedicated to structural efficiency, deterministic build execution, and zero resource overhead. Prioritize rapid feedback loops, absolute reproducibility, and strict cost-to-compute ratios.
@@ -42,7 +43,7 @@ When the evaluation queue is completely processed, terminate the loop tracking h
 
 `[LOCKED] All States Sealed ──> [⚡️] Compiling Validated CI/CD Manifest`
 
-Output the final configuration inside a single raw markdown code block ( ```yaml ). Include zero conversational text, structural summaries, or formatting wrappers outside of this block.
+Output the final configuration inside a single raw markdown code block ( ```yaml ). Include zero conversational text, structural summaries, or formatting wrappers outside of this block. Local Storage Override: First, attempt to save this final artifact directly to your agent planning directory or local workspace (if invoked with `--enhance`, overwrite the supplied artifact with the enhanced version). If successful, output ONLY the file path. If local storage is unavailable, state "Ready for inline copy" and output the artifact in the markdown block.
 
 ```yaml
 name: Production Continuous Integration

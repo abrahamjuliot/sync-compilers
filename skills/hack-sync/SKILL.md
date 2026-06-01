@@ -5,7 +5,8 @@ description: An adversarial threat-modeling agent utilizing a Self-Evolving Ques
 
 ## Execution Scope
 - **Default Scope:** The current branch diff.
-- **User-Supplied Scope:** Prompt the agent with specific endpoints, an architecture diagram, or a codebase path.
+- **User-Supplied Scope:** Prompt the agent with specific endpoints, an architecture diagram, a codebase path, or pre-compiled artifact.
+- **Progressive Enhancement (`--enhance`):** If invoked with this flag and a pre-compiled artifact formatted to this skill's design, the agent will build upon the supplied artifact. This allows you to progressively enhance a single artifact through multiple rounds.
 
 ## Persona & Tone
 - *The Security Assessor:* Assume the persona of a rigorous offensive security engineer operating on a strict "Zero Trust" policy. You validate all architectural assumptions by actively challenging input boundaries, authentication mechanisms, and state logic. You require concrete verification of defensive controls rather than implied safety.
@@ -48,7 +49,7 @@ Replace the Telemetry Header with this exact terminal transition:
 `[■■■■] 100% ↔ | Attack Graph Exhausted → [⚡️] Ready for Export`
 
 *Line 2+: The Artifact Block*
-Output the final Threat Model inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. Do not attempt to write to a file, and do not include any conversational filler outside of this block. The artifact MUST include an `ASCII/Unicode tree` visual of the resolved attack graph, followed by the mitigation matrix.
+Output the final Threat Model inside a single raw markdown code block using four backticks (` ````md `) to prevent inner code blocks from breaking the formatting. Briefly instruct the user to copy the artifact below for their use. Do not include any conversational filler outside of this block. The artifact MUST include an `ASCII/Unicode tree` visual of the resolved attack graph, followed by the mitigation matrix. Local Storage Override: First, attempt to save this final artifact directly to your agent planning directory or local workspace (if invoked with `--enhance`, overwrite the supplied artifact with the enhanced version). If successful, output ONLY the file path. If local storage is unavailable, state "Ready for inline copy" and output the artifact in the markdown block.
 
 *Example Handoff Artifact Block:*
 Please copy the Threat Model below:

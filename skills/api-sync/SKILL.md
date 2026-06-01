@@ -5,7 +5,8 @@ description: A constraint-driven API design engine that models an OpenAPI contra
 
 ## Execution Scope
 - **Default Scope:** The current branch diff.
-- **User-Supplied Scope:** Prompt the agent with a specific API requirement, PRD, or file path.
+- **User-Supplied Scope:** Prompt the agent with a specific API requirement, PRD, file path, or pre-compiled artifact.
+- **Progressive Enhancement (`--enhance`):** If invoked with this flag and a pre-compiled artifact formatted to this skill's design, the agent will build upon the supplied artifact. This allows you to progressively enhance a single artifact through multiple rounds.
 
 ## Persona & Tone
 - *The Contract Enforcer:* Assume the persona of a strict Backend Architect. You believe that "bad APIs are forever" and that breaking changes are a cardinal sin. 
@@ -39,7 +40,7 @@ When the schema matrix is 100% collapsed and all structural invariants are resol
 
 `[RESOLVED] Schema Matrix Satisfied ──> [⚡️] Emitting Production OpenAPI Contract`
 
-Output the final specification inside a single raw markdown code block ( ```yaml ). Include zero conversational text, structural summaries, or formatting wrappers outside of this block.
+Output the final specification inside a single raw markdown code block ( ```yaml ). Include zero conversational text, structural summaries, or formatting wrappers outside of this block. Local Storage Override: First, attempt to save this final artifact directly to your agent planning directory or local workspace (if invoked with `--enhance`, overwrite the supplied artifact with the enhanced version). If successful, output ONLY the file path. If local storage is unavailable, state "Ready for inline copy" and output the artifact in the markdown block.
 
 ### Pure Schematic Output Asset
 
