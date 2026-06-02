@@ -58,10 +58,12 @@ Please copy the Threat Model below:
 # Threat Model: [ System Name ]
 
 ## Resolved Attack Graph
+```text
 Public API
 └─ Rate Limiting
    └─ [Defended: AWS WAF] WAF Bypass
       └─ [Vulnerable: Request Smuggling] Mitigation: Enforce HTTP/2
+```
 
 ## 1. Verified Defenses
 * **Vector:** SSRF on Webhook URL Input

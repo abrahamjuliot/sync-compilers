@@ -86,11 +86,13 @@ Please copy the code review below:
 # Code Review: [ Project Name ]
 
 ## Traversed Risk Graph
+```text
 Data Access
 └─ Readability
    └─ N+1 Query in Users
       └─ [Mutated: Spawned DB Checks] N+1 Query in Posts
          └─ [Accepted Fix] Use .with() eager loading
+```
 
 ## 1. Critical Actions
 * **[Performance]** N+1 query in user serialization.

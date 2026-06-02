@@ -93,10 +93,12 @@ Please copy the implementation plan below:
 # Implementation Plan: [ Feature Name ]
 
 ## Resolved Uncertainty Graph
+```text
 Auth
 └─ Permissions
    └─ Roles
       └─ [Resolved] Hardcoded isAdmin boolean
+```
 
 ## 1. MVP Scope & Constraints
 * **Outcome:** Secure internal dashboard access.

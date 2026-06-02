@@ -56,10 +56,12 @@ Please copy your adversarial test plan below:
 # Adversarial Test Plan: [ Function Name ]
 
 ## Traversed Failure Graph
+```text
 Concurrency
 └─ Double Refund
    └─ [Must Handle: Add Lock] Lock Stampede
       └─ [Reject: 409 Conflict] Test: Assert 409 on 2nd Request
+```
 
 ## Edge Case Test Checklist
 * **[Concurrency] Double Refund Request**
